@@ -1,0 +1,343 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: arial;
+}
+
+* {
+  user-select: none;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: center;
+  -ms-align-items: center;
+  align-items: center;
+  background: linear-gradient(blue, grey, purple, white) 45px;
+}
+
+.phone_border {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  height: 500px;
+  border-radius: 30px;
+  background: #000;
+}
+
+.phone_speaker {
+  height: 10%;
+  background: #fff;
+}
+
+.phone_screen {
+  width: 230px;
+  height: 80%;
+  position: relative;
+  z-index: 3;
+  overflow: hidden;
+}
+
+.locked_screen {
+  display: flex;
+  background: url("./janko-ferlic-oe_ozu4ouZk-unsplash.jpg");
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  position: relative;
+  z-index: 4;
+}
+
+.phone_button {
+  height: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: 2px solid #393737;
+  cursor: pointer;
+}
+
+.information {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  font-size: 9px;
+  padding: 4px;
+}
+
+.connection {
+  flex: 2;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.lock {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.battery {
+  flex: 2;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.screen_lock {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 25px;
+}
+
+#clock {
+  font-size: 30px;
+  height: 45px;
+}
+.date {
+  font-size: 15px;
+}
+
+.bottom_screen {
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+}
+
+/* PASSWORD SECTION */
+
+.password_section {
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+}
+
+.password_buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.password_button {
+  width: 50px;
+  height: 50px;
+  background: #62618ec7;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 5px 7px;
+  font-weight: bold;
+  transition: 100ms all ease;
+}
+
+.password_button_active {
+  background: #c1c0c0e6;
+}
+
+.password_number {
+  font-size: 20px;
+}
+
+.password_char {
+  font-size: 8px;
+}
+
+.password_unlock_text {
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.password_cyrcles {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  width: 60%;
+  margin: 0 auto;
+}
+.password_unlock_cyrcles {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.pass_cyrcle {
+  display: flex;
+  width: 8px;
+  height: 8px;
+  /*background: #fff;*/
+  border: 1px solid #fff;
+  border-radius: 50%;
+  margin: 0 2px;
+}
+
+.emergency {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 5px 0;
+  font-size: 5px;
+  font-weight: bold;
+}
+#emergency,
+#cancel {
+  background: none;
+  color: white;
+  border: none;
+  font-size: px;
+  transition: 1s;
+}
+
+.password_screen {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  background: #949799;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+
+.phone_blocked .password_screen {
+  display: none !important;
+}
+.phone_blocked .locked_screen {
+  display: flex !important;
+}
+
+.mobile_locked {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #00000096;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-weight: bold;
+  display: none;
+}
+
+.mobile_locked_disabled {
+  font-size: 20px;
+}
+
+.mobile_locked_try_again {
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.mobile_unlocked {
+  display: none;
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: url(./iphone\ menu.jpg);
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+
+.phone_unlocked .locked_screen {
+  top: -500px;
+  transition: 400ms all ease;
+}
+.phone_unlocked .password_screen {
+  top: -500px;
+  transition: 400ms all ease;
+}
+
+.speaker_cyrcle {
+  background: #393737;
+  display: flex;
+  width: 4px;
+  height: 4px;
+  border-radius: 15px;
+}
+
+.speaker_line {
+  background: #393737;
+  display: flex;
+  width: 35px;
+  height: 4px;
+  margin-left: 10px;
+  border-radius: 15px;
+}
+
+.phone_speaker {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background: transparent;
+}
+
+.pass_cyrcle_active {
+  background: #fff;
+}
+
+.phone_shake {
+  animation: shake 300ms;
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(-5deg);
+  }
+  15% {
+    transform: rotate(5deg);
+  }
+  35% {
+    transform: rotate(-6deg);
+  }
+  55% {
+    transform: rotate(2deg);
+  }
+  65% {
+    transform: rotate(-4deg);
+  }
+  85% {
+    transform: rotate(6deg);
+  }
+  100% {
+    transform: rotate(-8deg);
+  }
+}
